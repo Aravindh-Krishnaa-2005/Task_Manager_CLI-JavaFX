@@ -39,17 +39,6 @@ This project allows users to **register, log in, create, edit, and delete tasks*
 
 ---
 
-## 🖼️ Project Screenshots
-
-### 1. Dashboard View
-![Dashboard](images/DASHBOARD.jpg)
-
-### 2. Login Page
-![Login Page](images/LOGIN.jpg)
-
-### 3. Register Page
-![Register Page](images/REGISTER.jpg)
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
