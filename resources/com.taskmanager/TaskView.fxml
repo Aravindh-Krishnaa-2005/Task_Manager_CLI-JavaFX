@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.taskmanager.TaskController">
+
+    <top>
+        <ToolBar prefHeight="40">
+            <Button text="Add Task" onAction="#onAddTask" />
+            <Button text="Delete Task" onAction="#onDeleteTask" />
+            <Button text="Refresh" onAction="#onRefresh" />
+            <Button text="Logout" onAction="#onLogout" />
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                </columnConstraints>
+
+                <rowConstraints>
+                    <RowConstraints valignment="CENTER" />
+                    <RowConstraints valignment="CENTER" />
+                    <RowConstraints valignment="CENTER" />
+                    <RowConstraints valignment="CENTER" />
+                    <RowConstraints valignment="CENTER" />
+                    <RowConstraints valignment="CENTER" />
+                    <RowConstraints valignment="CENTER" />
+                </rowConstraints>
+
+                <Label text="Title:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="titleField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="descriptionField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Priority:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="priorityField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Deadline:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="deadlineField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Status:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="statusChoice" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Completed:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <CheckBox fx:id="completedCheckBox" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <TableView fx:id="taskTable" prefHeight="400" prefWidth="800">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="titleColumn" text="Title" prefWidth="120"/>
+                    <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="180"/>
+                    <TableColumn fx:id="priorityColumn" text="Priority" prefWidth="100"/>
+                    <TableColumn fx:id="deadlineColumn" text="Deadline" prefWidth="120"/>
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="120"/>
+                    <TableColumn fx:id="completedColumn" text="Completed" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+</BorderPane>

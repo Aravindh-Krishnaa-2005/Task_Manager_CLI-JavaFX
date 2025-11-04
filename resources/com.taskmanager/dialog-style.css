@@ -1,0 +1,20 @@
+
+.table-row-cell:selected {
+    -fx-background-color: #4CAF50; /* green highlight */
+    -fx-text-fill: black; /* optional for contrast */
+}
+
+.table-row-cell:filled:selected .text {
+    -fx-fill: red;
+}
+
+/* Optional: for hover effect */
+.table-row-cell:hover {
+    -fx-background-color: #81C784; /* lighter green on hover */
+}
+
+/* Optional: ensure unselected text stays dark */
+.table-row-cell .text {
+    -fx-fill: red;
+}
+
